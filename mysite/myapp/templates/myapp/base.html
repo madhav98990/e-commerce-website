@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="shadow-lg">
+  <div class="flex items-center justify-between px-4 py-2.5 w-full">
+    <!-- Left side: Logo and site name -->
+    <a href="{% url 'index' %}" class="flex items-center">
+      <img class="h-9 mr-3" src="https://cdn4.iconfinder.com/data/icons/shopping-with-black-and-white-iconset/48/icon_9-128.png" alt="">
+      <span class="text-2xl font-semibold text-black hover:underline">Digital Marketplace</span>
+    </a>
+
+    <!-- Right side: Other nav items (e.g., Login, Cart) -->
+    <div class="flex space-x-4">
+      <a href="{% url 'dashboard' %}" class="mr-6 text-sm font-medium text-grey-500">Dashboard</a>
+                <a href="{% url 'sales' %}" class="mr-6 text-sm font-medium text-grey-500">Sales</a>
+                <a href="{% url 'createproduct' %} " class="mr-6 text-sm font-medium text-grey-500">Create Products</a>
+                <a href="{% url 'purchases' %}" class="mr-6 text-sm font-medium text-grey-500">Purchases</a>
+                <a href="{% url 'logout' %}" class="mr-6 text-sm font-medium text-grey-500">Logout</a>
+      <!-- Add other nav items as needed -->
+    </div>
+  </div>
+</nav>
+
+            
+    {% block body %}
+
+    {% endblock %}
+
+</body>
+</html>
